@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BD_MEUPROJETOWEBModelStoreContainer" CdmEntityContainer="BD_MEUPROJETOWEBEntities">
+    <EntitySetMapping Name="TabelaExemplo">
+      <EntityTypeMapping TypeName="BD_MEUPROJETOWEBModel.TabelaExemplo">
+        <MappingFragment StoreEntitySet="TabelaExemplo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TabelaExemplo2">
+      <EntityTypeMapping TypeName="BD_MEUPROJETOWEBModel.TabelaExemplo2">
+        <MappingFragment StoreEntitySet="TabelaExemplo2">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

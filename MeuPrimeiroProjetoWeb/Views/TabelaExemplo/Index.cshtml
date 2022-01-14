@@ -1,0 +1,56 @@
+﻿@model IEnumerable<MeuPrimeiroProjetoWeb.Models.TabelaExemplo>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Novo", "Create")
+</p>
+
+<div class="row">
+    <div class="col-xs-12">
+        <table id="simple-table" class="table  table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(Model => Model.Descricao)</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Descricao)
+                        </td>
+                        <td>
+                            <div class="hidden-sm hidden-xs btn-group">
+                                <button class="btn btn-xs btn-info" onclick="location.href = '@Url.Action("Edit", "TabelaExemplo", new { id = item.Id })'">
+                                    <i class="ace-icon fa fa-pencil bigger-120"></i>
+                                </button>
+
+                                <button class="btn btn-xs btn-danger" onclick="location.href = '@Url.Action("Details", "TabelaExemplo", new { id = item.Id })'">
+                                    <i class="ace-icon fa fa-flag bigger-120"></i>
+                                </button>
+
+                                <button class="btn btn-xs btn-warning" onclick="location.href = '@Url.Action("Delete", "TabelaExemplo", new { id = item.Id })'">
+                                    <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+            <thead>
+                <marquee style='width: 50%; color: blue;'><b>OSDRONES - Inspeção e Filmagens Aéreas</b></marquee>
+            </thead>
+        </table>
+    </div><!-- /.span -->
+</div><!-- /.row -->
